@@ -1,3 +1,4 @@
+This is a clone of audiokit for special needs of my app
 ![banner](/banner.png)
 
 [![npm version](https://badge.fury.io/js/%40react-native-community%2Faudio-toolkit.svg)](https://badge.fury.io/js/%40react-native-community%2Faudio-toolkit)
