@@ -129,11 +129,12 @@ RCT_EXPORT_METHOD(prepare:(nonnull NSNumber*)playerId
     }
     item.reactPlayerId = playerId;
     
-    // Add notification to know when file has stopped playing
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(itemDidFinishPlaying:)
-                                                 name:AVPlayerItemDidPlayToEndTimeNotification
-                                               object:item];
+    // TODO: I removed this because I don't need this, but maybe someone else needs it
+//    // Add notification to know when file has stopped playing
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(itemDidFinishPlaying:)
+//                                                 name:AVPlayerItemDidPlayToEndTimeNotification
+//                                               object:item];
     
     // Set audio session
     NSNumber *category = [options objectForKey:@"category"];
