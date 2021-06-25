@@ -21,6 +21,7 @@
 @interface AudioPlayer ()
 
 @property (nonatomic, strong) NSMutableDictionary *playerPool;
+@property (nonatomic, strong) AVPlayerLooper *playerLooper;
 
 @end
 
@@ -171,7 +172,7 @@ RCT_EXPORT_METHOD(prepare:(nonnull NSNumber*)playerId
         if (autoDestroy) {
             player.autoDestroy = [autoDestroy boolValue];
         }
-        AVPlayerLooper *playerLooper = [AVPlayerLooper playerLooperWithPlayer:player templateItem:item];
+        playerLooper = [AVPlayerLooper playerLooperWithPlayer:player templateItem:item];
 
         [[self playerPool] setObject:player forKey:playerId];
     } else {
