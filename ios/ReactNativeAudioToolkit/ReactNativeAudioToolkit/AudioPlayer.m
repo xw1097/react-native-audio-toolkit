@@ -21,13 +21,14 @@
 @interface AudioPlayer ()
 
 @property (nonatomic, strong) NSMutableDictionary *playerPool;
-@property (nonatomic, strong) AVPlayerLooper *playerLooper;
 
 @end
 
 @implementation AudioPlayer
 
 @synthesize bridge = _bridge;
+
+AVPlayerLooper *playerLooper;
 
 
 -(NSMutableDictionary*) playerPool {
