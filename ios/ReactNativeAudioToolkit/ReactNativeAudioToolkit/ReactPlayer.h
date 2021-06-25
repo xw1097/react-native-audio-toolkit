@@ -10,7 +10,7 @@
 
 #import <AVFoundation/AVFoundation.h>
 
-@interface ReactPlayer : AVPlayer
+@interface ReactPlayer : AVQueuePlayer
 
 @property (readwrite) BOOL autoDestroy;
 @property (readwrite) BOOL looping;
